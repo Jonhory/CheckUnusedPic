@@ -64,7 +64,9 @@
 * 删除完毕。打开项目，将图片资源文件夹重新导入，以快速解决删除图片文件后报错`No such file or directory`
 
 ###觉得好用，保存起来长期使用的方法
+
 ###脚本执行环境变量`~/.bash_profile`
+
 若没有该文件，则创建`vim ~/.bash_profile` 
 
 `export PATH=/Users/rhcf_ios/Bin:$PATH`
@@ -73,9 +75,13 @@
 
 这里是创建一个文件夹执行脚本，将搜索路径加入环境变量
 
-将`shell.sh`文件放入`/Users/yourUserName/Bin`文件夹下
+建议在用户目录下创建一个文件夹存放相关文件
 
 `mkdir Bin`创建文件夹
+
+将`findUnusedPic.sh 和 DelUnusedPic.sh`文件放入`/Users/yourUserName/Bin`文件夹下
+
+
 
 第一次创建时可以`source ~/.bash_profile`执行一次
 
