@@ -12,13 +12,15 @@
 然后再次`brew install ack`
 
 ###写一个shell脚本findUnusedPic.sh
+代码引用自《iOS开发进阶》（唐巧 著）
+
 作用是查询目录下未使用的图片资源并导出该图片资源的文件目录到当前目录下`UnusedPic.txt`文件内
 
     #! /bin/bash
 
     echo "" > UnusedPic.txt
     for i in `find . -name "*.png" -o -name "*.jpg"`; do
-        file=`basename -s .jpg "$i" | xargs basename -s .png | xargs basename -s @2x | xargs basename -s @3x`
+        file=`basename -s .jpg "$i" | xargs basename -s .png | xargs basename -s @2x `
         result=`ack -i "$file"`
         if [ -z "$result" ]; then
             echo "$i" >> UnusedPic.txt
